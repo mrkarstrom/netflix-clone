@@ -1,9 +1,11 @@
 <script lang="ts">
 	import Registration from './Registration.svelte';
+	import Topbar from './Topbar.svelte';
 </script>
 
 <div id="hero" class="w-full min-h-screen flex flex-col items-center justify-center">
 	<div id="overlay" class="w-full min-h-screen flex flex-col items-center justify-center">
+		<Topbar />
 		<Registration />
 	</div>
 </div>

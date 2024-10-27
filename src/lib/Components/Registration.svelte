@@ -9,14 +9,61 @@
 		<p class="mb-1">Från 109 kr. Avsluta när du vill.</p>
 		<h3>Redo att börja titta? Ange din e-postadress för att skapa eller återaktivera ett konto.</h3>
 		<div class="flex items-start w-full" id="inputContainer">
-			<input type="text" id="email" />
-			<button class=" bg-red-300">Register</button>
+			<!-- <input type="text" id="email" class="" /> -->
+			<input
+				class="styled-input"
+				autocomplete="email"
+				minlength="5"
+				maxlength="50"
+				type="email"
+				id="email-input"
+				name="email"
+				data-uia="field-email"
+				placeholder="Enter your email"
+				required
+			/>
+
+			<button class=" bg-red-300 cursor-pointer"
+				>Kom igång <i class="fas fa-chevron-right"></i></button
+			>
 		</div>
 	</div>
 </div>
 
 <style>
-	input {
+	.styled-input {
+		vertical-align: middle;
+		font-size: 1rem;
+		line-height: 1.5;
+		width: 100%;
+		padding: 1rem 0.5rem;
+		min-height: 16px;
+		min-width: 16px;
+		background: transparent;
+		border: 0 solid transparent;
+		color: inherit;
+		letter-spacing: inherit;
+		margin: 0;
+		text-align: left;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		transition: border-color 0.3s; /* Optional transition */
+		background: rgba(22, 22, 22, 0.7);
+		border-radius: 0.25rem;
+		border-width: 0.0625rem;
+		border-color: rgba(128, 128, 128, 0.7);
+	}
+
+	/* Additional styles for focus state */
+	.styled-input:focus {
+		outline: none; /* Remove default outline */
+		border: 1px solid #007bff; /* Change border color on focus */
+		background-color: rgba(0, 0, 0, 0.05); /* Optional background color on focus */
+	}
+
+	/* input {
 		width: auto;
 		-webkit-flex: 1 1 auto;
 		-ms-flex: 1 1 auto;
@@ -32,9 +79,10 @@
 		border-radius: 0.25rem;
 		border-width: 0.0625rem;
 		border-color: rgba(128, 128, 128, 0.7);
-	}
+	} */
 	button {
 		width: auto;
+		white-space: nowrap;
 		font-size: 1.5rem;
 		font-weight: 500;
 		min-height: 3.5rem;
