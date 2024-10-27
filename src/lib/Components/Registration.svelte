@@ -1,16 +1,41 @@
 <script lang="ts">
 </script>
 
-<div>
-	<h1>Hell from Register</h1>
+<div id="container">
+	<h1>Obegränsat med filmer, serier och annat</h1>
+	<p>Obegränsat med filmer, serier och annat</p>
 	<input type="text" id="email" />
-	<button>Register</button>
+
+	<button class=" bg-red-300">Register</button>
 </div>
 
 <style>
+	h1 {
+		margin-bottom: 0.5rem;
+	}
+	p {
+		margin-bottom: 1rem;
+	}
+	#container {
+		max-width: 31.75rem;
+	}
+
+	@media (min-width: 600px) {
+		#container {
+			max-width: 27rem;
+		}
+		p {
+			font-size: 1rem;
+			font-weight: 400;
+		}
+		h1 {
+			font-size: 2rem;
+			font-weight: 700;
+		}
+	}
+
 	div {
-		z-index: 1;
-		filter: brightness(1);
+		color: white;
 		min-height: 31rem;
 		margin: -2rem auto 0 auto;
 		display: -webkit-box;
