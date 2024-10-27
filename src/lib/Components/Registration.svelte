@@ -1,23 +1,56 @@
 <script lang="ts">
 </script>
 
-<div id="container">
-	<h1>Obegränsat med filmer, serier och annat</h1>
-	<p>Obegränsat med filmer, serier och annat</p>
-	<input type="text" id="email" />
-
-	<button class=" bg-red-300">Register</button>
+<div
+	class="text-white min-h-[31rem] md:min-h-[80vh] mx-auto mt-[-2rem] flex flex-col justify-center items-center w-full max-w-[120rem] px-8 pb-8"
+>
+	<div class="max-w-[31.75rem] text-center" id="container">
+		<h1 class="mb-0.5">Obegränsat med filmer, serier och annat</h1>
+		<p class="mb-1">Från 109 kr. Avsluta när du vill.</p>
+		<h3>Redo att börja titta? Ange din e-postadress för att skapa eller återaktivera ett konto.</h3>
+		<div class="flex items-start w-full" id="inputContainer">
+			<input type="text" id="email" />
+			<button class=" bg-red-300">Register</button>
+		</div>
+	</div>
 </div>
 
 <style>
-	h1 {
-		margin-bottom: 0.5rem;
+	input {
+		width: auto;
+		-webkit-flex: 1 1 auto;
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: auto;
+		font-size: 1rem;
+		line-height: 1.5;
+		width: 100%;
+		padding: 1.5rem 1rem 0.5rem;
+		background: rgba(22, 22, 22, 0.7);
+		border-radius: 0.25rem;
+		border-width: 0.0625rem;
+		border-color: rgba(128, 128, 128, 0.7);
 	}
-	p {
-		margin-bottom: 1rem;
+	button {
+		width: auto;
+		font-size: 1.5rem;
+		font-weight: 500;
+		min-height: 3.5rem;
+		padding: 0.75rem 1.5rem;
+		border-radius: 0.25rem;
+		background: rgb(229, 9, 20);
 	}
-	#container {
-		max-width: 31.75rem;
+
+	#inputContainer {
+		text-align: center;
+		box-sizing: border-box;
+		max-width: 61.5rem;
+		margin: 0 auto;
+		padding: 0 1.5rem;
+		content: '1';
+		gap: 10px;
 	}
 
 	@media (min-width: 600px) {
@@ -34,24 +67,23 @@
 		}
 	}
 
-	div {
-		color: white;
-		min-height: 31rem;
-		margin: -2rem auto 0 auto;
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		min-height: 80vh;
-		width: 100%;
-		max-width: 120rem;
-		-webkit-box-pack: center;
-		-ms-flex-pack: center;
-		-webkit-justify-content: center;
-		justify-content: center;
-		padding: 0 2rem 2rem 2rem;
+	@media (min-width: 960px) {
+		#container {
+			max-width: 37rem;
+		}
+		h1 {
+			font-size: 2.5rem;
+			font-weight: 700;
+		}
+		p {
+			margin: 0 0 24px;
+		}
+
+		h3 {
+			color: rgb(255, 255, 255);
+			font-size: 1rem;
+			font-weight: 400;
+			line-height: 1.5;
+		}
 	}
 </style>
